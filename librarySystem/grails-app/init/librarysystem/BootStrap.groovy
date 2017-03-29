@@ -1,18 +1,18 @@
-package com.zhanif /*name of the package*/
+package com.zhanif //name of the package
 
 class BootStrap {   
 
     def init = { servletContext ->
-
-/*defines course with a name, followed by new course which tells grails what kind of domain it should belong in.*/
+/*
+//defines course with a name, followed by new course which tells grails what kind of domain it should belong in.
 def bsccook = new Course(
-title: 'Bsc Hon In Cooking', /*defines the title of the course*/
-code: 0753, /*defines the unique code of the course*/
-leader: 'Jamie Oliver', /*defines the leader of the course*/
-department: 'JOLTD', /*defines the location of the course*/
-description: 'Learn with Jamie Oliver', /*defines the description and info of the course*/
-studyMode:'full-time' /*defines the duration of the course*/
-).save() /*saves changes to the course*/
+title: 'Bsc Hon In Cooking', //defines the title of the course
+code: 0753, //defines the unique code of the course
+leader: 'Jamie Oliver', //defines the leader of the course
+department: 'JOLTD', //defines the location of the course
+description: 'Learn with Jamie Oliver', //defines the description and info of the course
+studyMode:'full-time' //defines the duration of the course
+).save() //saves changes to the course
 
 def bscsport = new Course(
 title: 'Bsc Hon In Sport',
@@ -23,15 +23,15 @@ description: 'Learn sport with All time Premier League Scorer',
 studyMode:'part-time'
 ).save()
 
-/*defines student with a name, followed by new student which tells grails what kind of domain it should belong in.*/
+//defines student with a name, followed by new student which tells grails what kind of domain it should belong in.
 def jon = new Student(
-name: 'Jonathon West', /*name of student*/
-email:'west@gmail.com', /*student's email address*/
-username: 'jwest99', /*students username*/
-password: 'password', /*password for student*/
-studentID: 4431554, /*students unique identifier*/
-course: bscsport /*course that the student is on*/
-).save() /*saves changes to the student*/
+name: 'Jonathon West', //name of student
+email:'west@gmail.com', //student's email address
+username: 'jwest99', //students username
+password: 'password', //password for student
+studentID: 4431554, //students unique identifier
+course: bscsport //course that the student is on
+).save() //saves changes to the student
 
 def tim = new Student(
 name: 'Tim Mcdonald',
@@ -60,17 +60,17 @@ studentID: 4832420,
 course: 'Bsc Hon In Sport'
 ).save()
 
-/* defines name of the book followed by the new book function which tells grails which domain it is in*/
+//defines name of the book followed by the new book function which tells grails which domain it is in
 def BFG = new Book(
-title:'BFG', /*title of book*/
-subject:'Children', /*category type of book*/
-author: 'Roald Dahl', /*author of book*/
-isbn: 2214444, /*books unique identifier*/
-dateBorrowed: new Date('11/03/2017'), /*date the book was borrowed*/
-returnDate: new Date('21/03/2017'), /*date the book needs to be returned*/
-student: jon, /*student that has rented the book. Also recognises Jon as it has been defined above*/
-overdue:false /*overdue or not*/
-).save() /*saves changes*/
+title:'BFG', //title of book
+subject:'Children', //category type of book
+author: 'Roald Dahl', //author of book
+isbn: 2214444, //books unique identifier
+dateBorrowed: new Date('11/03/2017'), //date the book was borrowed
+returnDate: new Date('21/03/2017'), //date the book needs to be returned
+student: jon, //student that has rented the book. Also recognises Jon as it has been defined above
+overdue:false //overdue or not
+).save() //saves changes
 
 def George = new Book(
 title:'Georges Marvellous Medicine',
@@ -105,13 +105,13 @@ student: jon,
 overdue:true
 ).save()
 
-/*defines the function book review with a name followed by a new book review*/
+//defines the function book review with a name followed by a new book review
 def revbilly = new BookReview(
-book:'Match Of The Day Annual 2016/17', /*name of book*/
-datePublished: new Date('18/07/2016'), /*date of when the book was published*/
-student: tim, /*student that has rented the book. Also recognises Tim as it has been defined above*/
-review: 'Awful, in the Premier League section why is there no description about the mighty Aston Villa?. Missed out a big team there so Im guessing that the author is a Birmingham fan! Not Happy' /*review of the book*/
-).save() /*saves the review on grails*/
+book:'Match Of The Day Annual 2016/17', //name of book
+datePublished: new Date('18/07/2016'), //date of when the book was published
+student: tim, //student that has rented the book. Also recognises Tim as it has been defined above
+review: 'Awful, in the Premier League section why is there no description about the mighty Aston Villa?. Missed out a big team there so Im guessing that the author is a Birmingham fan! Not Happy' //review of the book
+).save() //saves the review on grails
 
 def revjake = new BookReview(
 book:'Sir Alex Ferguson: My Autobiography',
@@ -120,14 +120,14 @@ student: jon,
 review: 'Top Quality, grew up with the likes of Giggs, Cantona and Scholes etc. Speaks highly of all the ex players.'
 ).save()
 
-/*defines the library name followed by new library*/
+//defines the library name followed by new library
 def manor = new Library(
-building: 'Manor Library', /*name of library*/
-address: '64 Oxford Road, Sheffield, S2 1QH', /*address of library*/
-openingHours: 'Monday to Friday 8am-5pm, Sat 9am-5pm, Sun Closed', /*opening hours of library*/
-location: 'South Yorkshire', /*county*/
-studySpaces: 95 /*number of spaces available to study*/
-).save() /*saves record on grails*/
+building: 'Manor Library', //name of library
+address: '64 Oxford Road, Sheffield, S2 1QH', //address of library
+openingHours: 'Monday to Friday 8am-5pm, Sat 9am-5pm, Sun Closed', //opening hours of library
+location: 'South Yorkshire', //county
+studySpaces: 95 //number of spaces available to study
+).save() //saves record on grails
 
 def meersbrook = new Library(
 building: 'Meersbrook Library',
@@ -137,16 +137,16 @@ location: 'South Yorkshire',
 studySpaces: 110
 ).save()
 
-/*defines the librarian by name so that grails knows*/
+//defines the librarian by name so that grails knows
 def landlord = new Librarian(
-name: 'Stuart The Landlord Mitchell', /*name of librarian*/
-email: 'landlord@libraries.com', /*email address of librarian*/
-office: 'Office 213', /*office number of librarian*/
-username: 'landlord22', /*username of librarian*/
-password: 'password', /*password of librarian*/
-telephone: 01142214444, /*telephone line of librarian*/
-library: manor /*where the librarian works*/
-).save() /*saves record*/
+name: 'Stuart The Landlord Mitchell', //name of librarian
+email: 'landlord@libraries.com', //email address of librarian
+office: 'Office 213', //office number of librarian
+username: 'landlord22', //username of librarian
+password: 'password', //password of librarian
+telephone: 01142214444, //telephone line of librarian
+library: manor //where the librarian works
+).save() //saves record
 
 def neville = new Librarian(
 name: 'Alan Neville',
@@ -158,12 +158,11 @@ telephone: 01142214325,
 library: meersbrook
 ).save()
 
-/*below makes link by defining the name above, and stating where a certain attribute should be. In the first case, the book BFG should be added to (using addTo function) the library (defined above) followed by the name of the library in brackets*/
+//below makes link by defining the name above, and stating where a certain attribute should be. In the first case, the book BFG should be added to (using addTo function) the library (defined above) followed by the name of the library in brackets
 BFG.addToLibraries(manor) 
 motd.addToLibraries(meersbrook)
 siralex.addToLibraries(manor)
-George.addToLibraries(meersbrook)
-
+George.addToLibraries(meersbrook)*/
 
 
     }
