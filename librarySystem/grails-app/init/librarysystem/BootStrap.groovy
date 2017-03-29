@@ -27,7 +27,7 @@ studyMode:'part-time'
 def jon = new Student(
 name: 'Jonathon West', //name of student
 email:'west@gmail.com', //student's email address
-username: 'jwest99', //students username
+userName: 'jwest99', //students username
 password: 'password', //password for student
 studentID: 4431554, //students unique identifier
 course: bscsport //course that the student is on
@@ -36,7 +36,7 @@ course: bscsport //course that the student is on
 def tim = new Student(
 name: 'Tim Mcdonald',
 email:'tmac@gmail.com',
-username: 'tmcdonald4',
+userName: 'tmcdonald4',
 password: 'password',
 studentID: 4832056,
 course: bsccook
@@ -45,7 +45,7 @@ course: bsccook
 def billy = new Student(
 name: 'Billy Gould',
 email:'bgould@gmail.com',
-username: 'gould33',
+userName: 'gould33',
 password: 'password',
 studentID: 4832426,
 course: 'Bsc Hon In Cooking'
@@ -54,7 +54,7 @@ course: 'Bsc Hon In Cooking'
 def jake = new Student(
 name: 'Jake Gould',
 email:'jgould@gmail.com',
-username: 'gould37',
+userName: 'gould37',
 password: 'password',
 studentID: 4832420,
 course: 'Bsc Hon In Sport'
@@ -142,7 +142,7 @@ def landlord = new Librarian(
 name: 'Stuart The Landlord Mitchell', //name of librarian
 email: 'landlord@libraries.com', //email address of librarian
 office: 'Office 213', //office number of librarian
-username: 'landlord22', //username of librarian
+userName: 'landlord22', //username of librarian
 password: 'password', //password of librarian
 telephone: 01142214444, //telephone line of librarian
 library: manor //where the librarian works
@@ -152,7 +152,7 @@ def neville = new Librarian(
 name: 'Alan Neville',
 email: 'aneville@libraries.com',
 office: 'Office 200',
-username: 'nev1',
+userName: 'nev1',
 password: 'password',
 telephone: 01142214325,
 library: meersbrook
