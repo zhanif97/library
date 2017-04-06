@@ -15,8 +15,12 @@ class LibrarianSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
+    void emailType(){
+    when:"A Librarian has a valid email"
+    def neville=new Librarian(email:'aneville@libraries.com')
+    then:" The emailType method ensures that email is checked and validated"
+    neville.emailType() == 'aneville@libraries.com'
+
+}
+
 }

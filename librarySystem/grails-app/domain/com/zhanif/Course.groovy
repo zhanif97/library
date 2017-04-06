@@ -9,6 +9,12 @@ String department
 String description
 String studyMode
 
+double calculateFees(){
+
+4*fees
+
+}
+
 String toString(){
 return title}
     static constraints = {
